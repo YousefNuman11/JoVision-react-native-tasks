@@ -1,26 +1,23 @@
-import { useState } from "react";
+import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-const MyClassComponent_Task16 = () => {
+const MyClassComponent_Task16 = ({ isVisible }) => {
+  return (
+    <View style={styles.container}>
+      {isVisible && <Text style={styles.demoText}>Yousef Safwan A. Al-Numan</Text>}
+    </View>
+  );
+};
 
-    consst [Text, setText] = useState('Text for')
+const styles = StyleSheet.create({
+  container: {
+    alignItems: "center",
+    marginTop: 10,
+  },
+  demoText: {
+    fontSize: 20,
+    fontWeight: "bold",
+  },
+});
 
-    return (
-        
-        <View style={styles.container}>
-            <Text style={styles.demoText}>{text}</Text>
-        </View>
-    )
-}
-
-const style = StyleSheet.create({
-
-    container: {
-      flex: 1
-    },
-    demoText: {
-        fontSize: 15
-    }
-})
-
-export default MyClassComponent_Task16
+export default MyClassComponent_Task16;

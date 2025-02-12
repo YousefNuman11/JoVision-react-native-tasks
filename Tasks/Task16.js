@@ -1,30 +1,28 @@
+import React, { useState } from "react";
 import { Button, StyleSheet, View } from "react-native";
-import MyClassComponent_Task16 from "../Components/MyClassComponent_Task16"
+import MyClassComponent_Task16 from "../Components/MyClassComponent_Task16";
 
 const Task16 = () => {
+  const [toggle, setToggle] = useState(false);
 
   function onButtonPress() {
-
-  
+    setToggle(!toggle);
   }
-  
-  return(
-    <view style={style.container}>
 
-      <Button 
-      title={"Press me"}
-      onPress={onButtonPress}
-      ></Button>
-      <MyClassComponent_Task16></MyClassComponent_Task16>
-    </view>
+  return (
+    <View style={styles.container}>
+      <Button title={toggle ? "Hide" : "Show"} onPress={onButtonPress} />
+      <MyClassComponent_Task16 isVisible={toggle} />
+    </View>
+  );
+};
 
-
-  )
-}
-const style = StyleSheet.create({
-
+const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
-})
-export default Task16
+});
+
+export default Task16;
