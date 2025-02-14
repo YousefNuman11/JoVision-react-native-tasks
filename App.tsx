@@ -10,10 +10,6 @@ export default function App(){
     <Task18></Task18>
 
   );
-
-
-
-
 }
 
 

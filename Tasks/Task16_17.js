@@ -12,7 +12,7 @@ const Task16_17 = () => {
   return (
     <View style={styles.container}>
       <Button title={toggle ? "Hide" : "Show"} onPress={onButtonPress} />
-      <MyClassComponent_Task16 isVisible={toggle} />
+      <MyClassComponent_Task16_17 isVisible={toggle} />
     </View>
   );
 };
