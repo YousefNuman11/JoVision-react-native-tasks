@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-const MyClassComponent_Task16 = ({ isVisible }) => {
+const MyClassComponent_Task18 = ({ isVisible }) => {
   return (
     <View style={styles.container}>
       {isVisible && <Text style={styles.demoText}>Yousef Al-Numan</Text>}
@@ -20,4 +20,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MyClassComponent_Task16;
+export default MyClassComponent_Task18;

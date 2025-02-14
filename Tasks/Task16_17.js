@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Button, StyleSheet, View } from "react-native";
-import MyClassComponent_Task16 from "../Components/MyClassComponent_Task16";
+import MyClassComponent_Task16 from "../Components/MyClassComponent_Task16_17";
 
-const Task16 = () => {
+const Task16_17 = () => {
   const [toggle, setToggle] = useState(false);
 
   function onButtonPress() {
@@ -25,4 +25,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Task16;
+export default Task16_17;
