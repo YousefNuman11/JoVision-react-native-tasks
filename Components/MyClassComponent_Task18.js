@@ -1,21 +1,21 @@
-import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-const MyClassComponent_Task18 = ({ isVisible }) => {
+const MyClassComponent_Task18 = () => {
   return (
     <View style={styles.container}>
-      {isVisible && <Text style={styles.demoText}>Yousef Al-Numan</Text>}
+      <Text style={styles.nameText}>Yousef Safwan A. Al-Numan</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    justifyContent: "center",
     alignItems: "center",
-    marginTop: 10,
   },
-  demoText: {
-    fontSize: 20,
+  nameText: {
+    fontSize: 24,
     fontWeight: "bold",
   },
 });

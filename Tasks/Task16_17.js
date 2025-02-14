@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, StyleSheet, View } from "react-native";
-import MyClassComponent_Task16 from "../Components/MyClassComponent_Task16_17";
+import MyClassComponent_Task16_17 from "../Components/MyClassComponent_Task16_17";
 
 const Task16_17 = () => {
   const [toggle, setToggle] = useState(false);

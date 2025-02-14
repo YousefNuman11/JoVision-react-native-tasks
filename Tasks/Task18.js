@@ -1,20 +1,37 @@
-import React, { useState } from "react";
-import { Button, StyleSheet, View } from "react-native";
-import MyClassComponent_Task18 from "../Components/MyClassComponent_18";
+import React, { useEffect, useState } from "react";
+import { View, Text, ActivityIndicator, StyleSheet } from "react-native";
+import MyClassComponent_Task18 from "../Components/MyClassComponent_Task18";
 
 const Task18 = () => {
-  const [toggle, setToggle] = useState(false);
+  const [Loading, setLoading] = useState(true);
 
-  function onButtonPress() {
-    setToggle(!toggle);
+
+  function Time(){
+    
+    const timer = setTimeout(() => {
+
+      setLoading(false);
+    }, 5000);
   }
 
-  return (
-    <View style={styles.container}>
-      <Button title={toggle ? "Hide" : "Show"} onPress={onButtonPress} />
-      <MyClassComponent_Task18 isVisible={toggle} />
-    </View>
-  );
+  useEffect(() => {
+    Time();
+  }, []);
+
+
+return (
+  <View style={styles.container}>
+    {Loading ? (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size="large" color="blue" />
+        <Text style={styles.loadingText}>Loading...</Text>
+      </View>
+    ) : (
+      <MyClassComponent_Task18 />
+    )}
+  </View>
+);
+
 };
 
 const styles = StyleSheet.create({
@@ -23,6 +40,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  loadingContainer: {
+    alignItems: "center",
+  },
+  loadingText: {
+    fontSize: 18,
+    marginTop: 10,
+  },
 });
+
 
 export default Task18;
