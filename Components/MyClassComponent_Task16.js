@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 const MyClassComponent_Task16 = ({ isVisible }) => {
   return (
     <View style={styles.container}>
-      {isVisible && <Text style={styles.demoText}>Yousef Safwan A. Al-Numan</Text>}
+      {isVisible && <Text style={styles.demoText}>Yousef Al-Numan</Text>}
     </View>
   );
 };
