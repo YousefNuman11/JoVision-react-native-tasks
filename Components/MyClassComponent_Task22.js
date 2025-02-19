@@ -6,7 +6,7 @@ const MyFunctionPage = ({ onTextChange }) => {
     <TextInput
       style={styles.input}
       placeholder="Type something here..."
-      onChangeText={onTextChange} // Update the parent text
+      onChangeText={onTextChange} 
     />
   );
 };
