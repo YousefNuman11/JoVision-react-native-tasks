@@ -19,9 +19,11 @@ const Task26 = () => {
         const response = await fetch (`https://api.ipify.org/?format=json`);
         const data = await response.json();
         setIp(data.ip);
-    }catch(error){
+    }
+    catch(error){
         console.error("error in fecth");
-    }finally{
+    }
+    finally{
         setBlocking(false)
     } 
   };
